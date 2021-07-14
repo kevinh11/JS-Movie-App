@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --logofont: 'Khand',sans-serif;
+    --logocolor: red;
+
+    --bodyfont: 'Poppins',sans-serif;
+}
+
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--bodyfont);
+    overflow-x: hidden;
+    
+}
+
+nav {
+    width: 100vw;
+    font-size: 1.4em;
+    padding: 30px;
+    font-family: var(--logofont);
+    color: var(--logocolor);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+
+nav input {
+    width: 300px;
+    height: 30px;
+}
+
+section {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    width:100vw;
+    padding-top:50px;
+    color: white;
+    border-style: solid;
+    border-width: 0;
+    border-top-width: 1px;
+    height:40vh;
+}
+i.fab {
+    transform: scale(1.2);
+}
+.fa-twitter {
+    color: aqua;
+}
+.search-bar button {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-width: 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:5px;
+}
+.left-edge {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.trending-movies, .highest-rated, .search-results {
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+}
+
+.heading {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    word-break: break-all;
+}
+
+
+
+
+.rating {
+    font-family: var(--bodyfont);
+    font-size: 0.8em;
+}
+.trending-movie {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height:400px;
+    width: 300px;
+    gap:20px;
+    cursor: pointer;
+}
+
+.trending-movie:hover {
+    opacity: 0.6;
+}
+.trending-movie h1 {
+    font-size: 0.8em;
+}
+
+
+.image-section {
+    height: 200px;
+    width: 200px;
+
+    background-size: cover;
+}
+
+.poster {
+    background-position: center;
+    background-size:cover;
+    height:300px;
+    width: 300px;
+    color: white;
+}
+
+.first-page {
+    color:white;
+    font-family: var(--bodyfont);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:40px;
+
+}
+.select-page {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+}
+.logo {
+    color:var(--logocolor);
+    font-family: var(--logofont);
+}
+.socials {
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.socials a:hover {
+    transform: scale(1.4) translateY(-50%);
+}
+@media screen and (max-width:1200px) {
+    .trending-movies,.highest-rated,.search-results {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .trending-movie {
+        height: 300px;
+        width: 225px;
+    }
+
+    .poster {
+        width: 200px;
+        height: 200px;
+    }
+
+    footer {
+        gap:20px;
+    }
+    
+}
+@media screen and (max-width:650px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer {
+        height: 20vh;
+        font-size: 0.7em;
+    }
+
+    .trending-movies,.highest-rated,.search-results {
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+
+    .header {
+        flex-direction: column;
+        padding:20px;
+    }
+
+    .trending-movie {
+        height:300px;
+        width: 150px;
+    }
+
+    .poster {
+        height: 150px;
+        width: 150px;
+    }
+
+    footer {
+        gap:10px;
+    }
+
+    .pic-area {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    iframe {
+        height: 500px;
+        width: 300px;
+    }
+}
+
+@media  screen and (max-width:550px) {
+
+    section {
+        font-size: 0.8em;
+    }
+    .trending-movie {
+        height:250px;
+        width: 112.5px;
+    }
+
+    .poster {
+        height: 100px;
+        width: 110px;
+    }
+}
+    
