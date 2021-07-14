@@ -51,7 +51,7 @@ function displaySearchedMovies() {
 }
 
 function getTrailer() {
-    url= "http://api.themoviedb.org/3/movie/"+index+"/videos?api_key="+APIKEY
+    url= "https://api.themoviedb.org/3/movie/"+index+"/videos?api_key="+APIKEY
     fetch(url)
     .then(res => res.json())
     .then(data =>  {
