@@ -177,6 +177,9 @@ i.fab {
     justify-content: space-around;
     align-items: center;
 }
+.socials a{
+    pointer-events:none;
+}
 .socials a:hover {
     transform: scale(1.4) translateY(-50%);
 }
